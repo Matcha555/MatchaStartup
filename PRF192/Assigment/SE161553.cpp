@@ -23,7 +23,7 @@ void output2(int a[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        printf("%d  ", i, a[i]);
+        printf("%d  ", a[i]);
     }
 }
 

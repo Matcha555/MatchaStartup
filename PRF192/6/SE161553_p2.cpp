@@ -2,6 +2,30 @@
 #include <string.h>
 #include <stdlib.h>
 
+void input(int *a, int *n)
+{
+    *n = 0;
+    while (*n > 0)
+    {
+        printf("Enter elements: ");
+        scanf("%d ", n);
+
+        for (int i = 0; i < *n; i++)
+        {
+            printf("a[%d] = ", i);
+            scanf("%d", &a[i]);
+        }
+    }
+}
+
+void output(int *a, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d", a[i]);
+    }
+}
+
 void add(int a[], int &n, int k, int l)
 {
     for (int i = n - 1; i >= k; i--) // i--: d?ch t? v? trí n-1, r?i d?ch ti?p v? trí tru?c dó... d?n d?n VTCanChen

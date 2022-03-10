@@ -119,6 +119,11 @@ int main()
         }
         else if (gt == 2)
         {
+           do
+            {
+                printf("Enter elements: ");
+                scanf("%d", &n);
+            } while (n <= 0 || n > 50);
             input(a, &n);
 
             printf("\n----\n");

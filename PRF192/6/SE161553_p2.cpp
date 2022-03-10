@@ -2,31 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-void input(int *a, int *n)
-{
-    for (int i = 0; i < *n; i++)
-    {
-        printf("a[%d] = ", i);
-        scanf("%d", &a[i]);
-    }
-}
-
-void output(int *a, int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d  ", a[i]);
-    }
-}
-
 void add(int a[], int &n, int k, int l)
 {
-    for (int i = n - 1; i >= k; i--) // i--: d?ch t? v? trí n-1, r?i d?ch ti?p v? trí tru?c dó... d?n d?n VTCanChen
+    for (int i = n - 1; i >= k; i--) // i--: d?ch t? v? trÃ­ n-1, r?i d?ch ti?p v? trÃ­ tru?c dÃ³... d?n d?n VTCanChen
     {
         a[i + 1] = a[i];
     }
-    a[k] = l; // Gán s? c?n chèn vào v? trí c?n chèn.
-    n++;      // Xong khi chèn xong thì s? lu?ng phàn t? tang lên.
+    a[k] = l; // GÃ¡n s? c?n chÃ¨n vÃ o v? trÃ­ c?n chÃ¨n.
+    n++;      // Xong khi chÃ¨n xong thÃ¬ s? lu?ng phÃ n t? tang lÃªn.
 }
 
 int search(int *a, int n, int x) // x: bien can tim

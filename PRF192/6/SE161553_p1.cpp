@@ -1,30 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void input(int *a, int *n)
-{
-    *n = 0;
-    while (*n > 0)
-    {
-        printf("Enter elements: ");
-        scanf("%d ", n);
-
-        for (int i = 0; i < *n; i++)
-        {
-            printf("a[%d] = ", i);
-            scanf("%d", &a[i]);
-        }
-    }
-}
-
-void output(int *a, int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d", a[i]);
-    }
-}
-
 int check()
 {
     long n, s, t, hs, op; // s: t?ng, t: trung gian trong qua trinh tinh toan

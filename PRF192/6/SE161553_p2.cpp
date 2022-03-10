@@ -4,17 +4,10 @@
 
 void input(int *a, int *n)
 {
-    *n = 0;
-    while (*n > 0)
+    for (int i = 0; i < *n; i++)
     {
-        printf("Enter elements: ");
-        scanf("%d ", n);
-
-        for (int i = 0; i < *n; i++)
-        {
-            printf("a[%d] = ", i);
-            scanf("%d", &a[i]);
-        }
+        printf("a[%d] = ", i);
+        scanf("%d", &a[i]);
     }
 }
 
@@ -22,7 +15,7 @@ void output(int *a, int n)
 {
     for (int i = 0; i < n; i++)
     {
-        printf("%d", a[i]);
+        printf("%d  ", a[i]);
     }
 }
 
@@ -108,7 +101,7 @@ int main()
 
             do
             {
-                printf("\nPosition you wanna add(0 <= k < n): ");
+                printf("Position you wanna add(0 <= k < n): ");
                 scanf("%d", &k);
             } while (k < 0 || k > n);
             printf("Enter the number you wanna add: ");
@@ -116,10 +109,11 @@ int main()
             printf("The array after adding a value: ");
             add(a, n, k, l);
             output(a, n);
+            printf("\n");
         }
         else if (gt == 2)
         {
-           do
+        	do
             {
                 printf("Enter elements: ");
                 scanf("%d", &n);
@@ -135,14 +129,28 @@ int main()
         }
         else if (gt == 3)
         {
+        	do
+            {
+                printf("Enter elements: ");
+                scanf("%d", &n);
+            } while (n <= 0 || n > 50);
             input(a, &n);
+            printf("Array: ");
             output(a, n);
+            printf("\n");
         }
         else if (gt == 4)
         {
+        	do
+            {
+                printf("Enter elements: ");
+                scanf("%d", &n);
+            } while (n <= 0 || n > 50);
             int minVal, maxVal;
             input(a, &n);
+            
             maxMin(a, n, minVal, maxVal);
+            printf("\n");
         }
         else if (gt == 5)
         {
